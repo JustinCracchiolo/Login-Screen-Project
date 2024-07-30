@@ -1,0 +1,163 @@
+:root {
+    --green: rgb(9, 131, 90);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background: url("https://th.bing.com/th/id/R.4844312b1079ee0b6bd1cd8f90bfbb60?rik=ApGEZ%2fi7yZDeLA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fSuper-cool-picture-backgrounds.jpg&ehk=sgEHfm4fVk4HT36alHTZyd8CFpN6JO%2bToNd%2berN5HZE%3d&risl=&pid=ImgRaw&r=0") no-repeat;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 100px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-size: 2rem;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration-line: none;
+    font-weight: 200;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+.navigation .login-screen-button {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .login-screen-button:hover {
+    color: #000;
+    background-color: white;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255,  255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transition: 0.5s;
+    color: white;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+
+}
+
+.input-box input:focus~label, 
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.remember-forgot {
+    font-size: 0.9rem;
+    color: white;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-to-login {
+    width: 100%;
+    height: 45px;
+    background: rgb(5, 204, 204);
+    font-weight: bold;
+}
